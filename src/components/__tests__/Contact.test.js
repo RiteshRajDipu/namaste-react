@@ -3,6 +3,23 @@ import Contact from "../Contact";
 import  "@testing-library/jest-dom";
 
 describe("all test cases of contact us page", () => {
+  
+   beforeAll(() => {
+      console.log("Before All");
+   });
+
+   beforeEach(() => {
+      console.log("Before Each Test Case")
+   })
+
+   AfterAll(() => {
+      console.log("Before All");
+   });
+
+   AfterEach(() => {
+      console.log("After Each")
+   })
+
     test("Should load contact us page", () => {
         render(<Contact />) 
 
@@ -30,7 +47,7 @@ describe("all test cases of contact us page", () => {
          render(<Contact />)
      
          const inputBoxes = screen.getAllByRole("textbox");
-         console.log(inputBoxes.length)
+   
          expect(inputBoxes.length).not.toBe(3)
       });
 });

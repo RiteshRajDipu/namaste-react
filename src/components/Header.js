@@ -8,8 +8,6 @@ import { useSelector } from "react-redux";
 const Header = () => {
   const [btnNameReact, setBtnNameReact] = useState("login");
   const cartItem = useSelector((store) => store.cart.items);
-  
-  console.log(cartItem);
 
   const onlineStatus = useOnlineStatus();
   const {loggedInUser} = useContext(UserContext);
